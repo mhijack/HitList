@@ -1,0 +1,15 @@
+/* what will happen if I add a new localization */
+"add new localization" = "加一个本地化";
+
+/* This is Comment */
+"Test Comment" = "测试留言";
+
+/* What will happen if I change ONLY the comment */
+"Test String Modified" = "改一改";
+
+/* will capitalization matter? */
+"will capitalization matter" = "有区别啊!";
+
+/* WILL capitalization matter? */
+"WILL capitalization matter" = "很明显有区别";
+

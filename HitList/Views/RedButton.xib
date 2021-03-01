@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="RedView" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="RedView" customModule="HitList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLR-25-1Um">
+                    <rect key="frame" x="184" y="433" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="PEi-nE-YrU"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapRedView:" destination="iN0-l3-epB" eventType="touchUpInside" id="f1W-Cr-RaO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LLR-25-1Um" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PoR-XQ-2G5"/>
+                <constraint firstItem="LLR-25-1Um" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TtR-CS-SIB"/>
+            </constraints>
+            <connections>
+                <outlet property="redButton" destination="LLR-25-1Um" id="neW-Ha-YNv"/>
+            </connections>
+            <point key="canvasLocation" x="110" y="121"/>
+        </view>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6D-WC-het" customClass="LabelsView" customModule="HitList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c65-Jv-jkb">
+                    <rect key="frame" x="50" y="44" width="207" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1q-F5-qWG">
+                    <rect key="frame" x="372" y="44" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fPx-Vp-7NR"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="L1q-F5-qWG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c65-Jv-jkb" secondAttribute="trailing" constant="50" id="LTC-TB-hcN"/>
+                <constraint firstItem="L1q-F5-qWG" firstAttribute="top" secondItem="fPx-Vp-7NR" secondAttribute="top" id="Rkp-dU-dhr"/>
+                <constraint firstItem="c65-Jv-jkb" firstAttribute="leading" secondItem="fPx-Vp-7NR" secondAttribute="leading" constant="50" id="VeZ-dk-4as"/>
+                <constraint firstItem="c65-Jv-jkb" firstAttribute="top" secondItem="fPx-Vp-7NR" secondAttribute="top" id="e3G-mI-qYj"/>
+                <constraint firstItem="fPx-Vp-7NR" firstAttribute="trailing" secondItem="L1q-F5-qWG" secondAttribute="trailing" id="fEe-8R-IsG"/>
+                <constraint firstItem="fPx-Vp-7NR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="c65-Jv-jkb" secondAttribute="bottom" id="tPo-TA-N2G"/>
+                <constraint firstItem="fPx-Vp-7NR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L1q-F5-qWG" secondAttribute="bottom" id="zlg-En-Jes"/>
+            </constraints>
+            <point key="canvasLocation" x="951" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,15 @@
+/* Class = "UILabel"; text = "LabelLabelLabelLabelLabel"; ObjectID = "36c-q4-cbC"; */
+"36c-q4-cbC.text" = "LabelLabelLabelLabelLabel";
+
+/* Class = "UIBarButtonItem"; title = "Item2"; ObjectID = "AsG-8r-J6E"; */
+"AsG-8r-J6E.title" = "第二个";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "C0I-hV-XGo"; */
+"C0I-hV-XGo.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "lH6-aN-beb"; */
+"lH6-aN-beb.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WXw-eE-j3l"; */
+"WXw-eE-j3l.text" = "Label";
+
