@@ -11,6 +11,8 @@
 		3B13580325C10B7600FE2667 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B13580125C10B7600FE2667 /* DataModel.xcdatamodeld */; };
 		3B7B528625EC69E700D69740 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */; };
 		3B7B528B25EC6B2E00D69740 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B7B528A25EC6B2E00D69740 /* SnapKit */; };
+		3B7B528F25EC723A00D69740 /* test-mp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B528225EC691400D69740 /* test-mp4.mp4 */; };
+		3B7B529625EC791600D69740 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B529425EC791600D69740 /* MainTabBarController.swift */; };
 		3B7B602325C142D1001B8843 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B601F25C142D1001B8843 /* Person+CoreDataClass.swift */; };
 		3B7B602525C142D1001B8843 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B602125C142D1001B8843 /* Book+CoreDataClass.swift */; };
 		3B95EC2625CA8C9A00C798FE /* RedButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B95EC2525CA8C9A00C798FE /* RedButton.xib */; };
@@ -35,6 +37,8 @@
 		3B7B527925EB738C00D69740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B7B528225EC691400D69740 /* test-mp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test-mp4.mp4"; sourceTree = "<group>"; };
 		3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		3B7B529225EC768100D69740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		3B7B529425EC791600D69740 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3B7B601F25C142D1001B8843 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3B7B602125C142D1001B8843 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3B95EC2525CA8C9A00C798FE /* RedButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedButton.xib; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		3B7B528425EC69CF00D69740 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3B7B529425EC791600D69740 /* MainTabBarController.swift */,
 				3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */,
 			);
 			path = Screens;
@@ -203,11 +208,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
 					FE0F140E2104CADB0015DF4E = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7B528F25EC723A00D69740 /* test-mp4.mp4 in Resources */,
 				3B95EC8225CBB79300C798FE /* Localizable.strings in Resources */,
 				3B95EC8625CBBA2800C798FE /* InfoPlist.strings in Resources */,
 				FE0F14202104CADC0015DF4E /* LaunchScreen.storyboard in Resources */,
@@ -261,6 +268,7 @@
 				FE0F14152104CADB0015DF4E /* ViewController.swift in Sources */,
 				3B7B602525C142D1001B8843 /* Book+CoreDataClass.swift in Sources */,
 				3B7B602325C142D1001B8843 /* Person+CoreDataClass.swift in Sources */,
+				3B7B529625EC791600D69740 /* MainTabBarController.swift in Sources */,
 				3B95EC8C25CBD2DD00C798FE /* Person+CoreDataProperties.swift in Sources */,
 				3B13580325C10B7600FE2667 /* DataModel.xcdatamodeld in Sources */,
 				3B7B528625EC69E700D69740 /* VideoPlayerViewController.swift in Sources */,
@@ -294,6 +302,7 @@
 			children = (
 				FE0F14172104CADB0015DF4E /* Base */,
 				3B95EC7A25CBB45F00C798FE /* zh-Hans */,
+				3B7B529225EC768100D69740 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -399,6 +409,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -444,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HitList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_VARIABLE = "this is debug";
 			};
@@ -463,7 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HitList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_VARIABLE = "this is release";
 			};

@@ -249,6 +249,8 @@ extension ViewController: NSFetchedResultsControllerDelegate {
       break
     case .update:
       break
+    @unknown default:
+      assertionFailure()
     }
   }
   
@@ -262,6 +264,8 @@ extension ViewController: NSFetchedResultsControllerDelegate {
       tableView.reloadRows(at: [indexPath!], with: .fade)
     case .move:
       tableView.moveRow(at: indexPath!, to: newIndexPath!)
+    @unknown default:
+      assertionFailure()
     }
   }
   
