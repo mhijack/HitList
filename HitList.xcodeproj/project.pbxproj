@@ -16,7 +16,7 @@
 		3B64948225FD85B200514817 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3B64948125FD85B200514817 /* RxCocoa */; };
 		3B64948425FD85B200514817 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 3B64948325FD85B200514817 /* RxBlocking */; };
 		3B64948925FD8B0800514817 /* Item1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64948825FD8B0800514817 /* Item1ViewModel.swift */; };
-		3B64948E25FD8B6D00514817 /* RxSwift+isAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64948D25FD8B6D00514817 /* RxSwift+isAnimating.swift */; };
+		3B64948E25FD8B6D00514817 /* Reactive+isAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64948D25FD8B6D00514817 /* Reactive+isAnimating.swift */; };
 		3B64949325FD8C7300514817 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3B64949225FD8C7300514817 /* NVActivityIndicatorView */; };
 		3B64949525FD8C7300514817 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 3B64949425FD8C7300514817 /* NVActivityIndicatorViewExtended */; };
 		3B64949925FD8C8E00514817 /* UIViewController+startAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64949825FD8C8E00514817 /* UIViewController+startAnimating.swift */; };
@@ -59,7 +59,7 @@
 		3B64947025FD855F00514817 /* HitListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitListUITests.swift; sourceTree = "<group>"; };
 		3B64947225FD855F00514817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B64948825FD8B0800514817 /* Item1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item1ViewModel.swift; sourceTree = "<group>"; };
-		3B64948D25FD8B6D00514817 /* RxSwift+isAnimating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+isAnimating.swift"; sourceTree = "<group>"; };
+		3B64948D25FD8B6D00514817 /* Reactive+isAnimating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+isAnimating.swift"; sourceTree = "<group>"; };
 		3B64949825FD8C8E00514817 /* UIViewController+startAnimating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+startAnimating.swift"; sourceTree = "<group>"; };
 		3B7B527925EB738C00D69740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B7B528225EC691400D69740 /* test-mp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test-mp4.mp4"; sourceTree = "<group>"; };
@@ -148,10 +148,54 @@
 		3B64948C25FD8B5600514817 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3B64948D25FD8B6D00514817 /* RxSwift+isAnimating.swift */,
+				3B64948D25FD8B6D00514817 /* Reactive+isAnimating.swift */,
 				3B64949825FD8C8E00514817 /* UIViewController+startAnimating.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3B64949D25FD8E3C00514817 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B64948725FD8AF400514817 /* ViewModel */,
+				FE0F14142104CADB0015DF4E /* ViewController.swift */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		3B6494A025FD8EC500514817 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B529425EC791600D69740 /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		3B6494A125FD8EDE00514817 /* VideoPlayerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */,
+			);
+			path = VideoPlayerViewController;
+			sourceTree = "<group>";
+		};
+		3B6494A225FD8F2E00514817 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FE0F141E2104CADC0015DF4E /* LaunchScreen.storyboard */,
+				FE0F14162104CADB0015DF4E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3B6494A525FD8F7200514817 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FE0F14212104CADC0015DF4E /* Info.plist */,
+				FE0F14122104CADB0015DF4E /* AppDelegate.swift */,
+				FE0F141C2104CADC0015DF4E /* Assets.xcassets */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		3B7B528125EC686100D69740 /* Assets */ = {
@@ -165,8 +209,9 @@
 		3B7B528425EC69CF00D69740 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3B7B529425EC791600D69740 /* MainTabBarController.swift */,
-				3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */,
+				3B6494A025FD8EC500514817 /* MainTabBarController */,
+				3B64949D25FD8E3C00514817 /* RootViewController */,
+				3B6494A125FD8EDE00514817 /* VideoPlayerViewController */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -179,19 +224,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B95EC2825CA8CE000C798FE /* Views */ = {
+		3B95EC2825CA8CE000C798FE /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				3B95EC2525CA8C9A00C798FE /* RedButton.xib */,
 				3B95EC2925CA8CF200C798FE /* RedView.swift */,
 			);
-			path = Views;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		3B95EC7925CBB41F00C798FE /* Localization */ = {
 			isa = PBXGroup;
 			children = (
 				3B95EC7D25CBB46F00C798FE /* Localization.swift */,
+				3B95EC8425CBBA2800C798FE /* InfoPlist.strings */,
+				3B95EC8025CBB79300C798FE /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -228,22 +275,15 @@
 		FE0F14112104CADB0015DF4E /* HitList */ = {
 			isa = PBXGroup;
 			children = (
-				FE0F14212104CADC0015DF4E /* Info.plist */,
-				FE0F14122104CADB0015DF4E /* AppDelegate.swift */,
-				FE0F14142104CADB0015DF4E /* ViewController.swift */,
-				FE0F141C2104CADC0015DF4E /* Assets.xcassets */,
+				3B6494A525FD8F7200514817 /* Application */,
 				3B7B528125EC686100D69740 /* Assets */,
-				3B95EC8425CBBA2800C798FE /* InfoPlist.strings */,
-				FE0F141E2104CADC0015DF4E /* LaunchScreen.storyboard */,
-				3B95EC8025CBB79300C798FE /* Localizable.strings */,
+				3B95EC2825CA8CE000C798FE /* CustomViews */,
+				3B64948C25FD8B5600514817 /* Extension */,
 				3B95EC7925CBB41F00C798FE /* Localization */,
-				FE0F14162104CADB0015DF4E /* Main.storyboard */,
 				3B1357FB25C10A0A00FE2667 /* Model */,
 				3B7B528425EC69CF00D69740 /* Screens */,
+				3B6494A225FD8F2E00514817 /* Storyboards */,
 				3B95EC8E25CBE10E00C798FE /* Utility */,
-				3B64948C25FD8B5600514817 /* Extension */,
-				3B64948725FD8AF400514817 /* ViewModel */,
-				3B95EC2825CA8CE000C798FE /* Views */,
 			);
 			path = HitList;
 			sourceTree = "<group>";
@@ -388,7 +428,7 @@
 				FE0F14152104CADB0015DF4E /* ViewController.swift in Sources */,
 				3B7B602525C142D1001B8843 /* Book+CoreDataClass.swift in Sources */,
 				3B7B602325C142D1001B8843 /* Person+CoreDataClass.swift in Sources */,
-				3B64948E25FD8B6D00514817 /* RxSwift+isAnimating.swift in Sources */,
+				3B64948E25FD8B6D00514817 /* Reactive+isAnimating.swift in Sources */,
 				3B7B529625EC791600D69740 /* MainTabBarController.swift in Sources */,
 				3B95EC8C25CBD2DD00C798FE /* Person+CoreDataProperties.swift in Sources */,
 				3B64948925FD8B0800514817 /* Item1ViewModel.swift in Sources */,
