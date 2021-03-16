@@ -20,6 +20,10 @@
 		3B64949325FD8C7300514817 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3B64949225FD8C7300514817 /* NVActivityIndicatorView */; };
 		3B64949525FD8C7300514817 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 3B64949425FD8C7300514817 /* NVActivityIndicatorViewExtended */; };
 		3B64949925FD8C8E00514817 /* UIViewController+startAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64949825FD8C8E00514817 /* UIViewController+startAnimating.swift */; };
+		3B6494AA25FD90AF00514817 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6494A925FD90AF00514817 /* Item1ViewController.swift */; };
+		3B6494AB25FD90AF00514817 /* Item1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6494A925FD90AF00514817 /* Item1ViewController.swift */; };
+		3B6494B625FF46C100514817 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6494B525FF46C100514817 /* Stevia */; };
+		3B6494B9260060B300514817 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F14142104CADB0015DF4E /* ListViewController.swift */; };
 		3B7B528625EC69E700D69740 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */; };
 		3B7B528B25EC6B2E00D69740 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B7B528A25EC6B2E00D69740 /* SnapKit */; };
 		3B7B528F25EC723A00D69740 /* test-mp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B528225EC691400D69740 /* test-mp4.mp4 */; };
@@ -36,7 +40,7 @@
 		3B95EC8C25CBD2DD00C798FE /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95EC8B25CBD2DD00C798FE /* Person+CoreDataProperties.swift */; };
 		3B95EC9025CBE11C00C798FE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95EC8F25CBE11C00C798FE /* Utility.swift */; };
 		FE0F14132104CADB0015DF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F14122104CADB0015DF4E /* AppDelegate.swift */; };
-		FE0F14152104CADB0015DF4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F14142104CADB0015DF4E /* ViewController.swift */; };
+		FE0F14152104CADB0015DF4E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F14142104CADB0015DF4E /* ListViewController.swift */; };
 		FE0F14182104CADB0015DF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0F14162104CADB0015DF4E /* Main.storyboard */; };
 		FE0F141D2104CADC0015DF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0F141C2104CADC0015DF4E /* Assets.xcassets */; };
 		FE0F14202104CADC0015DF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0F141E2104CADC0015DF4E /* LaunchScreen.storyboard */; };
@@ -61,6 +65,7 @@
 		3B64948825FD8B0800514817 /* Item1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item1ViewModel.swift; sourceTree = "<group>"; };
 		3B64948D25FD8B6D00514817 /* Reactive+isAnimating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+isAnimating.swift"; sourceTree = "<group>"; };
 		3B64949825FD8C8E00514817 /* UIViewController+startAnimating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+startAnimating.swift"; sourceTree = "<group>"; };
+		3B6494A925FD90AF00514817 /* Item1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item1ViewController.swift; sourceTree = "<group>"; };
 		3B7B527925EB738C00D69740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B7B528225EC691400D69740 /* test-mp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test-mp4.mp4"; sourceTree = "<group>"; };
 		3B7B528525EC69E700D69740 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +86,7 @@
 		3B95EC8F25CBE11C00C798FE /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FE0F140F2104CADB0015DF4E /* HitList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F14122104CADB0015DF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE0F14142104CADB0015DF4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE0F14142104CADB0015DF4E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FE0F14172104CADB0015DF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE0F141C2104CADC0015DF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE0F141F2104CADC0015DF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			files = (
 				3B64949525FD8C7300514817 /* NVActivityIndicatorViewExtended in Frameworks */,
 				3B64947C25FD85B200514817 /* RxSwift in Frameworks */,
+				3B6494B625FF46C100514817 /* Stevia in Frameworks */,
 				3B95EC7525CBB0EA00C798FE /* FirstPackage in Frameworks */,
 				3B64949325FD8C7300514817 /* NVActivityIndicatorView in Frameworks */,
 				3B64948225FD85B200514817 /* RxCocoa in Frameworks */,
@@ -157,8 +163,7 @@
 		3B64949D25FD8E3C00514817 /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3B64948725FD8AF400514817 /* ViewModel */,
-				FE0F14142104CADB0015DF4E /* ViewController.swift */,
+				FE0F14142104CADB0015DF4E /* ListViewController.swift */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
@@ -191,11 +196,27 @@
 		3B6494A525FD8F7200514817 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				FE0F14212104CADC0015DF4E /* Info.plist */,
 				FE0F14122104CADB0015DF4E /* AppDelegate.swift */,
 				FE0F141C2104CADC0015DF4E /* Assets.xcassets */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		3B6494A625FD907A00514817 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				3B6494A725FD908500514817 /* Item1ViewController */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		3B6494A725FD908500514817 /* Item1ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B64948725FD8AF400514817 /* ViewModel */,
+				3B6494A925FD90AF00514817 /* Item1ViewController.swift */,
+			);
+			path = Item1ViewController;
 			sourceTree = "<group>";
 		};
 		3B7B528125EC686100D69740 /* Assets */ = {
@@ -209,6 +230,7 @@
 		3B7B528425EC69CF00D69740 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3B6494A625FD907A00514817 /* Items */,
 				3B6494A025FD8EC500514817 /* MainTabBarController */,
 				3B64949D25FD8E3C00514817 /* RootViewController */,
 				3B6494A125FD8EDE00514817 /* VideoPlayerViewController */,
@@ -275,6 +297,7 @@
 		FE0F14112104CADB0015DF4E /* HitList */ = {
 			isa = PBXGroup;
 			children = (
+				FE0F14212104CADC0015DF4E /* Info.plist */,
 				3B6494A525FD8F7200514817 /* Application */,
 				3B7B528125EC686100D69740 /* Assets */,
 				3B95EC2825CA8CE000C798FE /* CustomViews */,
@@ -334,6 +357,7 @@
 				3B64948125FD85B200514817 /* RxCocoa */,
 				3B64949225FD8C7300514817 /* NVActivityIndicatorView */,
 				3B64949425FD8C7300514817 /* NVActivityIndicatorViewExtended */,
+				3B6494B525FF46C100514817 /* Stevia */,
 			);
 			productName = HitList;
 			productReference = FE0F140F2104CADB0015DF4E /* HitList.app */;
@@ -373,6 +397,7 @@
 				3B7B528925EC6B2E00D69740 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				3B64947A25FD85B100514817 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				3B64949125FD8C7300514817 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				3B6494B425FF46C100514817 /* XCRemoteSwiftPackageReference "Stevia" */,
 			);
 			productRefGroup = FE0F14102104CADB0015DF4E /* Products */;
 			projectDirPath = "";
@@ -414,6 +439,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B64947125FD855F00514817 /* HitListUITests.swift in Sources */,
+				3B6494AB25FD90AF00514817 /* Item1ViewController.swift in Sources */,
+				3B6494B9260060B300514817 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +452,12 @@
 				3B1357FD25C10A1D00FE2667 /* DataController.swift in Sources */,
 				3B95EC8925CBD2D600C798FE /* Book+CoreDataProperties.swift in Sources */,
 				3B95EC9025CBE11C00C798FE /* Utility.swift in Sources */,
-				FE0F14152104CADB0015DF4E /* ViewController.swift in Sources */,
+				FE0F14152104CADB0015DF4E /* ListViewController.swift in Sources */,
 				3B7B602525C142D1001B8843 /* Book+CoreDataClass.swift in Sources */,
 				3B7B602325C142D1001B8843 /* Person+CoreDataClass.swift in Sources */,
 				3B64948E25FD8B6D00514817 /* Reactive+isAnimating.swift in Sources */,
 				3B7B529625EC791600D69740 /* MainTabBarController.swift in Sources */,
+				3B6494AA25FD90AF00514817 /* Item1ViewController.swift in Sources */,
 				3B95EC8C25CBD2DD00C798FE /* Person+CoreDataProperties.swift in Sources */,
 				3B64948925FD8B0800514817 /* Item1ViewModel.swift in Sources */,
 				3B13580325C10B7600FE2667 /* DataModel.xcdatamodeld in Sources */,
@@ -742,6 +770,14 @@
 				minimumVersion = 5.1.1;
 			};
 		};
+		3B6494B425FF46C100514817 /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:freshOS/Stevia.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		3B7B528925EC6B2E00D69740 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -787,6 +823,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B64949125FD8C7300514817 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorViewExtended;
+		};
+		3B6494B525FF46C100514817 /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B6494B425FF46C100514817 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
 		};
 		3B7B528A25EC6B2E00D69740 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

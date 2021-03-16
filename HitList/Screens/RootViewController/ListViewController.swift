@@ -28,10 +28,13 @@
 
 import UIKit
 import CoreData
+import RxSwift
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
+  
+  var count: Observable<Int>
   
   
   override func viewDidLoad() {
@@ -47,6 +50,10 @@ class ViewController: UIViewController {
     tableView.delegate = self
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     tableView.contentInsetAdjustmentBehavior = .always
+    
+    let subscribe = count.subscribe { (x) in
+      print(x)
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -85,9 +92,7 @@ class ViewController: UIViewController {
             let nameToSave = textField.text else {
         return
       }
-      
       self.save(name: nameToSave)
-      self.tableView.reloadData()
     }
     
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
@@ -118,17 +123,19 @@ class ViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ListViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let person = AppDelegate.shared.dataController?.personController.object(at: indexPath) as? Person else {
       return
     }
     
+    /// Modifies entry
     print(person)
     let name = person.name ?? "nil"
     person.name = "\(name)+\(name)"
     AppDelegate.shared.dataController?.saveContext()
+    /// Go to another page
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -184,19 +191,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    cell.alpha = 0
-    let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 0, 0)
-    cell.layer.transform = transform
-    UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-      cell.alpha = 1
-      cell.layer.transform = CATransform3DIdentity
-    }, completion: nil)
+//    cell.alpha = 0
+//    let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 0, 0)
+//    cell.layer.transform = transform
+//    UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
+//      cell.alpha = 1
+//      cell.layer.transform = CATransform3DIdentity
+//    }, completion: nil)
   }
   
 }
 
 // MARK: - , UITableViewDropDelegate
-extension ViewController: UITableViewDropDelegate {
+extension ListViewController: UITableViewDropDelegate {
   
   func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
   }
@@ -207,7 +214,7 @@ extension ViewController: UITableViewDropDelegate {
 }
 
 // MARK: - UITableViewDragDelegate
-extension ViewController: UITableViewDragDelegate {
+extension ListViewController: UITableViewDragDelegate {
   
   func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
     let dragItem = UIDragItem(itemProvider: NSItemProvider())
@@ -242,20 +249,24 @@ extension ViewController: UITableViewDragDelegate {
 }
 
 // MARK: - NSFetchedResultsControllerDelegate
-extension ViewController: NSFetchedResultsControllerDelegate {
+extension ListViewController: NSFetchedResultsControllerDelegate {
   
   func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
     tableView.beginUpdates()
   }
   
+  func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    tableView.endUpdates()
+  }
+  
   func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
     switch type {
     case .insert:
-      tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+      tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
     case .delete:
-      tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+      tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
     case .move:
-      tableView.reloadSections([sectionIndex], with: .automatic)
+      tableView.reloadSections([sectionIndex], with: .fade)
       break
     case .update:
       break
@@ -277,10 +288,6 @@ extension ViewController: NSFetchedResultsControllerDelegate {
     @unknown default:
       assertionFailure()
     }
-  }
-  
-  func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-    tableView.endUpdates()
   }
   
 }
